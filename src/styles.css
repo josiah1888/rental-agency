@@ -1,0 +1,416 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin: 0 auto;}
+html {font-size: 100%;overflow-y: scroll;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.clear{	clear: both;}
+
+body {background:white;margin: 0 auto;font-family: 'Open Sans', sans-serif;background-color:#222;}
+
+.btn-top{background:#0093D0; color:#fff; text-align:center; padding-top:10px; height:50px; width:50px; position:fixed; bottom:0; right:0; font-size:15pt;z-index: 1000;}
+
+#page-wrap{background-image:url(../images/body_bkg.png);background-color:#FFFFFF;}
+#page-wrap h1 {font-family: 'Oswald', sans-serif;}
+
+
+
+h1{font-family: 'Oswald', sans-serif;margin-left:10px;}
+p{font-family: 'Open Sans', sans-serif;text-align: justify;margin-left:10px;margin-right:10px;}
+.firstcharacter { float: left; color: #333; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: "Yanone Kaffeesatz", Helvetica, Arial, sans-serif; }
+
+
+
+.navbar.navbar-inverse.navbar-fixed-top .container .navbar-header .navbar-brand img {height: 40px; width: 149px;}
+#header {
+	z-index:1;position:fixed;top:0px;left:0px;height:50px;width:100%;background-color: #333;border-bottom:1px solid #000;}
+.container-flex{width:100%;max-width:1000px;}	
+#header-conatainer{width:100%;max-width:1000px;min-width:768px;margin-left:auto;margin-right:auto;}	
+#logo{width: 200px;float: left;height: 42px;text-decoration:none;font-family: 'Oswald', sans-serif;text-shadow: 0px 1px #000;font-size:24px;padding-top: 8px;text-decoration:none;margin-left:10px;}	
+#nav {height: 40px;width: auto;padding-top: 10px;float: right;margin-right:15px;}
+#menu{margin-right:20px;}
+.navbar-inverse .navbar-nav>li>a {font-family: "oswald", "open sans", arial, helvetica;color:#cccccc; font-size: 12pt;}
+#nav a{text-decoration:none;padding-right:25px;}
+#nav ul{}
+
+
+.available{padding-top:15px;text-align:center;font-weight:500;font-size:16px;}
+
+
+
+#company{height:auto;margin-top:20px;background-repeat:no-repeat;background-position:top left;border-bottom-width: 2px;border-bottom-style: groove;border-bottom-color: #fff;padding-bottom:25px;min-height:140px;}
+.company-box{float:left;margin-bottom:10px;margin-right: 15px;}
+.company-info{float:left;max-width: 750px;}
+#company-last{height:auto;margin-top:20px;background-repeat:no-repeat;background-position:top left;}
+#company-padding{float:left;width:38px;height:20px;}
+#company h3{margin-top:20px;margin-bottom:5px;font-style: italic;padding-left:5px;}
+#company-last h3{margin-top:20px;margin-bottom:5px;font-style: italic;padding-left:5px;}
+
+
+
+#news-box{height:auto;margin-top:20px;background-repeat:no-repeat;background-position:top left;padding-bottom:25px;min-height:140px;}
+
+
+
+.articles{margin-left: 10px;margin-right:10px;margin-top:10px;height:auto;width:auto;background-color:#FFF;border-top:2px solid #CCCCCC;border-left:2px solid #CCCCCC;border-right:2px solid #CCCCCC;border-bottom:1px solid #CCCCCC;padding:5px;font-family:'Open Sans', sans-serif;}
+.articles h4{font-size:18px;font-weight:800;color:#0093D0;}
+.articles h5{color:#999;padding-top:10px;}
+.articles h6{color:#999;padding-top:0px;font-style:italic;}
+.articles a{text-decoration:none;}
+.article-bottom {background-image: url(../images/box_bottom.jpg);background-position: center top;margin-left: 10px;margin-right:10px;margin-bottom:10px;height:10px;width:auto;background-size:100%;background-repeat:no-repeat;}
+
+
+.divider{height:10px;background-image:url(../images/divider_bkg.png);background-repeat: repeat-y;background-position: center;background-size: 100% 100%;width:100%;max-width:1000px;}
+
+
+
+#banner-container {height:100%;width:100%;max-height:360px;max-width:1000px;min-width:300px;background-repeat: no-repeat;background-position:bottom left;}
+
+
+	
+.page_housing {height:auto;padding:5px;}
+.page_housing a{font-size:15px;text-decoration:none;width:320px;display:block;}
+
+
+
+.housingtype {color:#000000;width: 100%;max-width: 320px;height:200px;display:block;float:left;text-align:center;margin:5px;position: relative;}
+.housingtype a{color:#000; text-decoration:none;}
+.housingtype h1 {background-image:url(../images/housing-h3_bkg.png);position: absolute;left:0;bottom: 5px;color:#CCC;padding:5px;text-align:center;width:100%;font-family: 'Open Sans', sans-serif;font-size:16px;font-weight:100;}
+.housingtype h1:hover{color:#FFF;}
+.housingtype img{width:100%;height:auto;}
+
+
+
+.housing-box{width:100%;max-width:1000px;height:200px;}
+
+
+.housing-single-family{background-repeat: no-repeat;background-position: center top;}
+
+
+
+#page-wrap span a{color:#000; text-decoration:none;font-weight:700;font-family:'Open Sans', sans-serif;}
+	
+	
+	
+#page_single-family {width:100%;max-width:1000px;padding:5px;}
+#page_single-family > span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_town-homes{width:100%;max-width:1000px;padding:5px;}
+#page_town-homes> span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_duplexes {width:100%;max-width:1000px;padding:5px;}
+#page_duplexes > span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_historic {width:100%;max-width:1000px;padding:5px;}
+#page_historic > span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_residential {width:100%;max-width:1000px;padding:5px;}
+#page_residential > span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+	
+#page_student-houseing {width:100%;max-width:1000px;padding:5px;color:#000;}
+#page_student-houseing > span { position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+	
+#page_hud-homes {width:100%;max-width:1000px;padding:5px;color:#000;}
+#page_hud-homes > span {position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_commercial {width:100%;max-width:1000px;padding:5px;color:#000;}
+#page_commercial > span {position: absolute; right: 10px; bottom: 5px; text-decoration:underline; }
+
+
+
+#page_partners {height:auto;width:100%;max-width:1000px;padding:15px;}
+#partner_container{max-width:800px;width:100%;margin-left:auto;margin-right:auto;min-height: 100px;}
+.partner:before{display: block; content: " "; margin-top: -75px; height: 75px; visibility: hidden;}
+.partner{margin-left: 10px;margin-right:10px;margin-top:10px;min-height:130px;width:auto;background-color:#FFF;border-top:2px solid #CCCCCC;border-left:2px solid #CCCCCC;border-right:2px solid #CCCCCC;border-bottom:1px solid #CCCCCC;padding:5px; padding-right:15px; font-family:'Open Sans', sans-serif;clear:both;}
+
+
+
+#page_contact{height:auto;width:100%;max-width:1000px;padding:5px;padding-bottom:50px;color:#000;}
+#page_contact h1{/*text-shadow: 0px 2px #000;*/}
+#display{text-align:center;font-family: "Oswald",sans-serif;color: #0093D0;font-size: 15pt;}
+#page_history{	height:auto;width:100%;max-width:1000px;padding:15px;}
+#page_history h3{margin-bottom:5px;font-style: italic;padding-left:5px;font-weight:200;font-size:24px;padding-top:8px;}
+
+
+
+#footer_container{width:100%;background-color:#222;border-top:1px solid #000;background-image:url(../images/shadow.png);background-repeat: repeat-x;background-position: center top;}
+#footer {width:100%;max-width:1000px;padding-top:20px;text-align:center;}
+#footer ul li {list-style-type: none;display: inline;padding: 15px;font-family: "oswald", "open sans", arial, helvetica;}
+#footer ul li a:hover{color:#CCCCCC;text-decoration:none;}
+#footer ul li a:active{}
+#footer ul li a:visited{}
+#footer_container #footer div h6 {font-family: "open sans", arial, helvetica;}
+
+back2housing{color:white;}
+
+.page-padding {height:55px; width:100%; max-width:1000px;}
+
+a {color:#000; text-decoration:none;}	
+a:hover {/*text-decoration:underline;*/}
+
+
+
+/*label {	display:block;margin-top:20px;letter-spacing:2px;}*/
+input, textarea {width:439px;height:27px;background:#efefef;border:1px solid #dedede;padding:10px;margin-top:3px;font-size:0.9em;color:#3a3a3a;}
+input:focus, textarea:focus {border:1px solid #97d6eb;}
+textarea {height:213px;font-family:Arial, Helvetica, sans-serif;}
+#submit {background-color:#0093d0;color:#000000;width:127px;height:38px;border:none;margin-top:20px;cursor:pointer;font-family: 'Open Sans', sans-serif;font-weight:700;}
+#submit:hover {opacity:0.9;}
+#email_validation, #name_validation {display:none;}
+label.required:after {content:'*';color:red;}
+span.error {background-color:#FFDFDF;color:red;}
+.row {margin:5px;}
+
+
+
+.contact-container{max-width:900px;width:100%;min-height:400px;margin-left:auto;margin-right:auto;text-align: center;}
+.contact{max-width:250px;width:100%;height:auto;margin: 20px;display: inline-block;}
+.contact h1{text-align:center;}
+.contact h2{text-align:center;margin:10px 0px 10px 0px;font-weight:800;font-size:20px;}
+.contact h3{text-align:center;margin:0px 0px 10px 0px;padding:0;font-size:18px;font-style:italic;}
+.contact p{text-align:center;margin:0;}
+.contact a{text-decoration:none;color:#000;}
+.contact-padding{float:left;max-width:50px;min-width:10px;width:100%;height:5px;}
+.circleBase {border-radius: 50%;behavior: url(PIE.htc); /* remove if you don't care about IE8 */}
+.contact1 {width: 200px;height: 200px;background: #09F;background-image:url(../images/contact1.png);border: 3px solid #0093d0;text-align:center;}
+.contact2 {width: 200px;height: 200px;background: #09F;background-image:url(../images/contact2.png);border: 3px solid #0093d0;text-align:center;}
+.contact3 {width: 200px;height: 200px;background: #09F;background-image:url(../images/contact3.png);border: 3px solid #0093d0;text-align:center;}
+.contact4 {width: 200px;height: 200px;background: #09F;background-image:url(../images/contact4.png);border: 3px solid #0093d0;text-align:center;}
+.contact5 {width: 200px;height: 200px;background: #09F;background-image:url(../images/contact5.png);border: 3px solid #0093d0;text-align:center;}
+
+#page-wrap #page9 #contact-container #contact h2 {text-align: center;}
+#page-wrap #page9 #contact-container #contact h3 {text-align: center;}
+
+
+.resource-container{max-width:900px;width:100%;min-height:400px;margin-left:auto;margin-right:auto;text-align: center;}
+.resource{max-width:200px;width:100%;height:auto;margin: 10px 10px 30px 10px;display: inline-block;}
+.resource h1{text-align:center;}
+.resource h2{text-align:center;margin:10px 0px 10px 0px;font-weight:800;font-size:20px;}
+.resource h2:hover{text-decoration:none;}
+.resource h3{text-align:center;margin:0px 0px 10px 0px;padding:0;font-size:18px;font-style:italic;}
+.resource p{text-align:center;margin:0;}
+.resource a{text-decoration:none;color:#000;}
+.resource a:hover{text-decoration:none;color:#0093d0;}
+.resource-padding{float:left;max-width:50px;min-width:10px;width:100%;height:5px;}
+.resources{width: 100px;height: 100px; background-position:center; background-size:contain; text-align:center;}
+.resource1 {background-image:url(../images/resource1.png);}
+.resource2 {background-image:url(../images/resource2.png);}
+.resource3 {background-image:url(../images/resource3.png);}
+.resource4 {background-image:url(../images/resource4.png);}
+.resource5 {background-image:url(../images/resource5.png);}
+.resource6 {background-image:url(../images/resource6.png);}
+.resource7 {background-image:url(../images/resource7.png);}
+.resource8 {background-image:url(../images/resource8.png);}
+.resource9 {background-image:url(../images/resource9.png);}
+.resource10 {background-image:url(../images/resource10.png);}
+.resource11 {background-image:url(../images/resource11.png);}
+
+
+.faq-container{}
+.faq-container ul{ list-style:circle inside; margin:0 10px; padding:0;}
+.faq-container ul li a:active{ color:#522F91;}
+.faq-container ul li a:visited{ color:#522F91;}
+.faq-container h3{color:#0093d0; margin-left:5px;}
+.faq_top{margin: 0px 5px 30px 5px;display: block;text-align: left;font-weight: bold;text-transform: uppercase;font-size: 11px;}
+.faq_head:before{display: block;content: " "; margin-top: -60px; height: 60px; visibility: hidden; }
+.faq_head{margin: 0 auto 15px auto;}
+/* Style the buttons that are used to open and close the accordion panel */
+button.faq-accordion {background-color: #eee; color: #444; font-weight: bold; cursor: pointer; padding: 18px; width: 100%; text-align: left; border: none; outline: none; transition: 0.4s; border-bottom:1px solid #CCC;}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.faq-accordion:hover {background-color: #CCC;}
+button.faq-accordion.active {background-color: #0093d0;color: white;}
+/* Style the accordion panel. Note: hidden by default */
+div.faq-panel {padding: 0 18px; background-color: white; display: none; padding: 0 18px; background-color: white; max-height: 0; overflow: hidden; transition: 0.6s ease-in-out; opacity: 0; border-bottom: 1px solid #ccc;}
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.faq-panel.show { display: block !important; padding: 10px 10px 20px 10px;opacity: 1; max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */}
+button.faq-accordion:after {content: '\02795'; /* Unicode character for "plus" sign (+) */ font-size: 13px; color: #777; float: right; margin-left: 5px;}
+button.faq-accordion.active:after {content: "\2796"; /* Unicode character for "minus" sign (-) */color:white;}
+button.faq-accordion.active:hover {color:white;}
+
+
+
+.icon-award {background-image:url(../images/history_icons.png);background-repeat:no-repeat;background-position:top left;height: 40px;width: auto;padding-left:40px;}
+.icon-news {background-image:url(../images/history_icons.png);background-repeat:no-repeat;background-position:bottom left;height: 40px;width: auto;padding-left:40px;}
+
+
+/*==========HOUSING INFO==========*/
+#housing-padding {width:100%;min-width:0px;max-width:160px;float:left;position: relative;height:1px;}
+#housing_info_container{max-width: 350px;margin-left: auto;margin-right: auto;}
+#housing_info {margin-top: 10px;height: auto;background: #FFF;border-top: 2px solid #CCCCCC;border-left: 2px solid #CCCCCC;border-right: 2px solid #CCCCCC;border-bottom: 1px solid #CCCCCC;padding: 5px 5px 0px 10px;font-family: 'Open Sans', sans-serif;}
+#housing_info h3{font-family: 'Oswald', sans-serif;font-size:23pt;font-weight:bold;margin:0;}
+#housing_info h4{font-family: 'Oswald', sans-serif;font-size:14pt;font-weight:500;margin:0;color:#0093D0;}
+#housing_info ul{font-family: 'Oswald', sans-serif;margin:5px;}
+#housing_price{font-family: 'Oswald', sans-serif;color:#0093D0;text-align:right;font-weight:500;font-size:15pt;width:100%;}
+#housing_price span{padding-right:2px;color:#666;font-weight:200;font-size:10pt;}
+#housing_bottom {background: url(http://www.rentsemo.com/images/box_bottom.jpg);background-position: center top;margin-bottom: 10px;height: 20px;background-size: 100% 16px;background-repeat: no-repeat;border-top: 8px solid #0093D0;}
+
+
+
+#apply{width:100%;margin-left:auto;margin-right:auto;margin-top:10px;padding-top:10px;padding-bottom:10px;}
+#application{max-width:655px;width:100%;min-height:80px;margin-left:auto;margin-right:auto;}
+.apply_btn{width:325px; min-height:80px; float:left; text-align:right;}
+.apply_btn a img{float:left;}
+.social_btn{width:330px; min-height:80px;float:left;}
+
+
+
+.foot_links_l{list-style-type: none; color:#FFFFFF; padding:0; text-align:right; width:165px; float:left; padding-right: 5px; font-size:12px;}
+.foot_links_r{list-style-type: none; color:#FFFFFF; padding:0;text-align:left;width:165px; float:right; padding-left: 5px; font-size:12px;}
+
+
+.quick_links{background-image: url("../images/body_bkg.png"); z-index:1000; -webkit-box-shadow:0px 10px 10px -11px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow:0px 10px 10px -11px rgba(0, 0, 0, 0.5);
+          box-shadow:0px 10px 10px -11px rgba(0, 0, 0, 0.5);}
+.quick_links ul{list-style-type: none; margin: 0; padding: 0; list-style:none; text-align:center;/*border-bottom: 1px solid #ccc;*/ border-top: 1px solid #CCC;}
+.quick_links ul li{padding: 5px 20px;width: 120px;display: inline-block;}
+.quick_links ul li a{font-family:'open sans',helvetica,arial;font-weight: bold;text-transform: uppercase;color: #0093D0;font-size: 10pt;}
+
+
+
+.property_panel_container{background:#fff; border:1px solid #CCC; float:none; padding:10px; margin-bottom:10px; max-width:750px; margin-left: auto;margin-right: auto;}
+.property_panel_container2{background:#fff; border:1px solid #CCC; float:none; padding:0px; margin:0px; max-width:750px;}
+.property_location{float:left;position: relative;width: 100%;font-family: "Oswald",sans-serif;color: #0093D0;text-align: left;font-weight: 500;font-size: 15pt;margin-bottom: 5px;}
+.property_img{float:left;background-color: #222; max-width:330px;width: 100%; height:230px; padding:0;margin:0; overflow:hidden; text-align:center;position: relative;}
+.property_img .fancybox img{border: medium none;display: block;margin: 0px auto 0px -258px;position: absolute;left: 50%;/*min-width:425px;*/}
+.property_pics{padding-top:5px;}
+.property_pics p{text-align: left;}
+.property_pics p img{vertical-align:baseline;}
+.property_list{float:left; max-width:398px;padding: 0px 0px 0px 10px; margin:0;}
+.property_list ul{list-style:none; list-style-position:inside; text-align:left; font-size:14px;padding:0; margin:0;line-height: 27px;}
+.property_description{padding:0;margin:0; float:left;}
+.property_available{float:left;font-family: 'Oswald', sans-serif;/*color:#0093D0;*/color:#522F91;text-align:left;font-weight:500;font-size:15pt;width:50%;}
+.property_rented{float:left;font-family: 'Oswald', sans-serif;/*color:#666666;*/color:#999;text-align:left;font-weight:500;font-size:15pt;width:50%;}
+.property_rent{float:left;font-family: 'Oswald', sans-serif;color:#0093D0;text-align:right;font-weight:500;font-size:15pt;width:50%;}
+.property_rent span{padding-right:2px;color:#666;font-weight:200;font-size:13pt;}
+
+.prop_item strong {font-family:'open sans', helvetica, arial; margin-top:5px;}
+.prop_item span{display: block;padding: 0px 0px 5px 0px;margin-top: -5px;}
+.property_panel .property_list ul li{color: #000;font-family:'open sans', helvetica, arial;font-weight:300;}
+.property_panel .property_description h3{font-family: "open sans",helvetica,arial;font-weight: bold;margin-top: 10px;}
+.prop_item{text-align:center; border-bottom:1px solid #ccc; float:left; margin-right:10px;min-width: 184px;}
+.prop_title{font-size:9px; color:#999; text-transform:uppercase;}
+.bed_head:before{display: block;content: " "; margin-top: -100px; height: 100px; visibility: hidden; }
+.bed_head{font-weight:bold; font-size:16px; border-bottom:2px solid #0093D0;max-width: 750px; width:100%;text-align: center;margin: 0 auto 15px auto;font-family: 'Open Sans', sans-serif; padding-bottom:5px}
+.prop_top{max-width: 750px;margin: 0px auto;display: block;text-align: right;font-weight: bold;text-transform: uppercase;font-size: 11px;}
+
+.prop_frame{max-width:750px; margin-left: auto;margin-right: auto; width:100%; min-height:645px;overflow-y: hidden;}
+
+/* Flexible iFrame */
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* MAINTENANCE FORM */
+.mainrequest{
+	margin: 0 auto;
+    max-width: 500px;
+	min-width: 250px;
+	}
+    .mainrequest .submit{
+        margin:15px 0px;padding: 10px 25px; background-color: #0093D0; border: none; color: white; cursor: pointer;font-family:'open sans';font-weight:bold;text-transform:uppercase;width: auto;height: auto;
+    }
+.c_field{
+	 border:2px solid #0093D0; position:relative; margin-top:20px;padding-right:10px;
+	}
+    .c_field input{
+	margin:5px;border:none; width:100%; font-size:14pt; height:40px; color:#333; background: none; padding:0px;
+	}
+	.c_field textarea{
+	margin:5px;border:none; width:100%; font-size:14pt; height:240px; color:#333;resize:none;background-image:url(../images/body_bkg.png);
+	}
+.c_title{
+	padding:0px 5px; position:absolute; top:-11px; margin-left:10px; color:#333; font-family:'open sans'; background-image:url(../images/body_bkg.png); font-size:10pt; text-transform:uppercase; font-weight:bold;
+	}
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+    }
+
+
+.bottomMenu { display: none; position: fixed; bottom: 0; width: 100%; border-top: 1px solid #666666; background: #222; z-index: 1; padding:0px;
+}
+.bottom_banner_container{  max-width:1000px; margin:0 auto;}
+.bottom_banner_container p{text-align:center;padding:3px; margin:0; color:#fff; font-family:'Oswald', helvetica, arial; font-size:25px;}
+.bottom_banner_container p span{color:#0093D0;}
+.bottom_banner_container p button{background-color:none; border:none; height:30px;}
+
+
+
+
+
+@media all and (max-width: 480px) {
+.mydiv { display: none; }  
+#footer ul{text-align: center;float: none;}  
+#footer ul li{padding: 5px;}  
+}
+
+
+
+@media all and (max-width: 450px) {
+.property_list{float:none;margin: 0px auto;width: 185px;}
+.prop_item {min-width:20px;width: 100%;}
+.property_list {float: none;margin: 0px auto;width: 100%; padding:0px;}
+.property_list ul{line-height: 20px; }
+}
+	
+
+@media(max-width:776px) {
+.property_list{max-width: 700px;} 
+.bottom_banner_container p{font-size:18px;}   
+}
+
+
+@media(max-width:991px) {
+}
+	
+	
+@media(max-width:1016px) {
+	#housing_logo{display:none;height:0;}
+	#housing_btn_container{margin-left: auto;margin-right: auto;width: 670px;}    
+}
+
+
+@media all and (max-width: 690px) {
+#housing_btn_container{margin-left: auto;margin-right: auto;width:320px;}
+.housingtype{float:none;margin:0 0 10px 0;}
+#contact{float:none;}
+.apply_btn{float:none;width: 310px;}
+.social_btn{float:none;width: 310px;margin-left: auto;margin-right: auto;width: 310px;}
+.apply_btn a img{float:none;}
+}
+
+
+@media all and (max-width: 320px) {
+	.page_housing a{width:310px;}	
+}
+@media all and (max-width: 380px) {
+ .prop_item {min-width:20px;width: 100%;}
+.property_list {float: none;margin: 0px auto;width: 100%;}
+.property_list ul{line-height: 20px; }
+}
