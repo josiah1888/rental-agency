@@ -290,7 +290,8 @@ button.faq-accordion.active:hover {color:white;}
 .property_pics p img{vertical-align:baseline;}
 .property_list{float:left; max-width:398px;padding: 0px 0px 0px 10px; margin:0;}
 .property_list ul{list-style:none; list-style-position:inside; text-align:left; font-size:14px;padding:0; margin:0;line-height: 27px;}
-.property_description{padding:0;margin:0; float:left;}
+.property_description{padding:0;margin:0;}
+.property_description p {margin: 10px 0;}
 .property_available{float:left;font-family: 'Oswald', sans-serif;/*color:#0093D0;*/color:#522F91;text-align:left;font-weight:500;font-size:15pt;width:50%;}
 .property_rented{float:left;font-family: 'Oswald', sans-serif;/*color:#666666;*/color:#999;text-align:left;font-weight:500;font-size:15pt;width:50%;}
 .property_rent{float:left;font-family: 'Oswald', sans-serif;color:#0093D0;text-align:right;font-weight:500;font-size:15pt;width:50%;}
