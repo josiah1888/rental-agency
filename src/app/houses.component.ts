@@ -4,25 +4,34 @@ import 'rxjs/add/Observable/of';
 import {House} from './house';
 import {DataService} from './data.service';
 import {HouseComponent} from './house.component';
+import {EditableHouseComponent} from './editable-house.component';
 
 @Component({
   selector: 'houses',
-  directives: [HouseComponent],
+  directives: [HouseComponent, EditableHouseComponent],
   template: `
-        <div *ngFor="let house of houses | async">
-            <house [house]="house"></house>
-        </div>
+    <div *ngFor="let house of houses | async">
+        <house [house]="house"></house>
+    </div>
     
-    <button (click)="save()">Save new house</button>
+    <editable-house [house]="newHouse" *ngIf="newHouse" [hidden]="!newHouse" (save)="saveHouse($event)" ></editable-house>
+    
+    <button (click)="createNewHouse()">Create New House</button>
   `
 })
 export class HousesComponent {
   houses: Observable<House[]>;
+  newHouse: House = null;
   constructor(private dataService: DataService) {
       this.houses = dataService.houses;
   }
   
-  save() {
-      this.dataService.save(new House({rent: 525, isRented: true }));
+  createNewHouse() {
+      this.newHouse = new House();
+  }
+  
+  saveHouse(house: House) {
+      this.dataService.save(house);
+      this.newHouse = null;
   }
 }

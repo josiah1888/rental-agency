@@ -164,7 +164,7 @@ a:hover {/*text-decoration:underline;*/}
 
 
 /*label {	display:block;margin-top:20px;letter-spacing:2px;}*/
-input, textarea {width:439px;height:27px;background:#efefef;border:1px solid #dedede;padding:10px;margin-top:3px;font-size:0.9em;color:#3a3a3a;}
+/*input, textarea {width:439px;height:27px;background:#efefef;border:1px solid #dedede;padding:10px;margin-top:3px;font-size:0.9em;color:#3a3a3a;} */
 input:focus, textarea:focus {border:1px solid #97d6eb;}
 textarea {height:213px;font-family:Arial, Helvetica, sans-serif;}
 #submit {background-color:#0093d0;color:#000000;width:127px;height:38px;border:none;margin-top:20px;cursor:pointer;font-family: 'Open Sans', sans-serif;font-weight:700;}
@@ -284,7 +284,7 @@ button.faq-accordion.active:hover {color:white;}
 .property_panel_container2{background:#fff; border:1px solid #CCC; float:none; padding:0px; margin:0px; max-width:750px;}
 .property_location{float:left;position: relative;width: 100%;font-family: "Oswald",sans-serif;color: #0093D0;text-align: left;font-weight: 500;font-size: 15pt;margin-bottom: 5px;}
 .property_img{float:left;background-color: #222; max-width:330px;width: 100%; height:230px; padding:0;margin:0; overflow:hidden; text-align:center;position: relative;}
-.property_img .fancybox img{border: medium none;display: block;margin: 0px auto 0px -258px;position: absolute;left: 50%;/*min-width:425px;*/}
+.property_img .fancybox img{border: medium none;display: block;margin: 0px auto 0px -258px;position: absolute;left: 50%;min-width:425px;}
 .property_pics{padding-top:5px;}
 .property_pics p{text-align: left;}
 .property_pics p img{vertical-align:baseline;}
