@@ -5,9 +5,9 @@
         </div>
         <div class="property_img">
             <!--431 S. Ellis-->
-            <div style="position: absolute; right: 0; z-index: 5;">
+            <div style="position: absolute; right: 0; z-index: 5;" class="full-width">
             <label for="ImageUrl" style="color: #FFF;" >Image Url</label>
-            <input name="ImageUrl" [(ngModel)]="house.imageUrl"/>
+            <input name="ImageUrl" [(ngModel)]="house.imageUrl" class="full-width"/>
                 </div> 
                 <img [src]="house.imageUrl" height="290" [alt]="house.address" style="opacity: .4;" />
         </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="property_description">
             <h3 class="prop_title">Description</h3>
-            <input [(ngModel)]="house.description" />
+            <textarea [(ngModel)]="house.description" ></textarea>
         </div>
         <div class="property_rented">
             <input type="radio" name="isRented" [checked]="house.isRented" (change)="house.isRented = true"> Rented
