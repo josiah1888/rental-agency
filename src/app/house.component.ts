@@ -14,5 +14,9 @@ export class HouseComponent {
   @Input() house: House;
   @Output() save: EventEmitter<House> = new EventEmitter();
   @Output() delete: EventEmitter<House> = new EventEmitter();
+  hasAuth$: Observable<boolean>;
+  constructor(dataService: DataService) {
+    this.hasAuth$ = dataService.hasAuth$;
+  }
 }
 

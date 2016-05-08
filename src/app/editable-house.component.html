@@ -3,7 +3,7 @@
         <div class="property__actions-container">
             <i class="fa fa-save large margin--small" (click)="save.emit(house)"></i>
             <i class="fa fa-close large margin--small" (click)="cancel.emit()"></i>
-            <i class="fa fa-trash large margin--small" (click)="delete.emit(house)"></i> <!--if I have an id--> 
+            <i *ngIf="house.id" class="fa fa-trash large margin--small" (click)="delete.emit(house)"></i> 
         </div>
         <div class="property_location">
             <input [(ngModel)]="house.address" />

@@ -10,7 +10,7 @@ import {EditableHouseComponent} from './editable-house.component';
   selector: 'houses',
   directives: [HouseComponent, EditableHouseComponent],
   template: `
-    <div *ngFor="let house of houses | async">
+    <div *ngFor="let house of houses$ | async">
         <house [house]="house" (save)="saveHouse($event)" (delete)="deleteHouse($event)"></house>
     </div>
     
@@ -21,10 +21,10 @@ import {EditableHouseComponent} from './editable-house.component';
   `
 })
 export class HousesComponent {
-  houses: Observable<House[]>;
+  houses$: Observable<House[]>;
   newHouse: House = null;
   constructor(private dataService: DataService) {
-      this.houses = dataService.houses;
+      this.houses$ = dataService.houses$;
   }
   
   createNewHouse() {
