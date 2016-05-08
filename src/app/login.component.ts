@@ -1,6 +1,8 @@
 import {Observable} from 'rxjs/Observable';
+import {Subscription} from 'rxjs/Subscription'
 import {Component} from '@angular/core';
 import {DataService} from './data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'login',
@@ -21,9 +23,22 @@ export class LoginComponent {
   hasAuth$: Observable<boolean>;
   email: string;
   password: string;
-  constructor(private dataService: DataService) {
+  hasAuthSub: Subscription;
+  constructor(private dataService: DataService, private router: Router) {
       this.hasAuth$ = dataService.hasAuth$;
-      this.hasAuth$.subscribe(() => this.email = this.password = '');
+  }
+  
+  ngOnInit() {
+      this.hasAuthSub = this.hasAuth$.subscribe(hasAuth => {
+          this.email = this.password = '';
+          if (hasAuth) {
+              this.router.navigate(['/']);
+          }
+        });
+  }
+  
+  ngOnDestroy() {
+      this.hasAuthSub.unsubscribe();
   }
   
   login() {
