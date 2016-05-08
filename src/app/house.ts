@@ -1,4 +1,5 @@
 export class House {
+    public id: string = '';
     public rent: number = 525;
     public isRented: boolean = false;
     public numBedrooms: number = 1;
@@ -13,6 +14,7 @@ export class House {
     public address: string = '123 Main St.';
     public imageUrl: string = 'http://rentsemo.com/img/gallery/singlefamily/lrg_singlefamily_25.jpg';
     constructor(house: {
+        id?: string,
         rent?: number,
         isRented?: boolean,
         numBedrooms?: number,

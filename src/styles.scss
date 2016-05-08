@@ -1,7 +1,23 @@
 @charset "utf-8";
 
-input {
-    padding: 5px;
+.margin--small {
+  margin: 5px;
+}
+
+.fa
+{
+  cursor: pointer;
+  &.large {
+  font-size: 2.5em;
+  }
+}
+
+.property_panel {
+  position: relative;
+}
+
+.property__actions-container {
+  float:right;
 }
 
 .full-width {

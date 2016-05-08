@@ -11,12 +11,13 @@ import {EditableHouseComponent} from './editable-house.component';
   directives: [HouseComponent, EditableHouseComponent],
   template: `
     <div *ngFor="let house of houses | async">
-        <house [house]="house"></house>
+        <house [house]="house" (save)="saveHouse($event)" (delete)="deleteHouse($event)"></house>
     </div>
     
-    <editable-house [house]="newHouse" *ngIf="newHouse" [hidden]="!newHouse" (save)="saveHouse($event)" ></editable-house>
-    
-    <button (click)="createNewHouse()">Create New House</button>
+    <editable-house [house]="newHouse" *ngIf="newHouse" [hidden]="!newHouse" (save)="saveHouse($event)" (cancel)="cancel()"></editable-house>
+    <div class="text-center">
+        <button (click)="createNewHouse()" class="btn">Create New House</button>
+    </div>
   `
 })
 export class HousesComponent {
@@ -31,7 +32,15 @@ export class HousesComponent {
   }
   
   saveHouse(house: House) {
-      this.dataService.save(house);
+      this.dataService.create(house);
+      this.newHouse = null;
+  }
+  
+  deleteHouse(house: House) {
+      this.dataService.delete(house);
+  }
+  
+  cancel() {
       this.newHouse = null;
   }
 }

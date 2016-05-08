@@ -11,5 +11,7 @@ import {DataService} from './data.service';
 export class EditableHouseComponent {
   @Input() house: House;
   @Output() save: EventEmitter<House> = new EventEmitter();
+  @Output() cancel: EventEmitter<any> = new EventEmitter();
+  @Output() delete: EventEmitter<House> = new EventEmitter();
 }
 
