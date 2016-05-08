@@ -15,16 +15,18 @@ import {EditableHouseComponent} from './editable-house.component';
     </div>
     
     <editable-house [house]="newHouse" *ngIf="newHouse" [hidden]="!newHouse" (save)="saveHouse($event)" (cancel)="cancel()"></editable-house>
-    <div class="text-center">
+    <div class="text-center" *ngIf="hasAuth$ | async">
         <button (click)="createNewHouse()" class="btn">Create New House</button>
     </div>
   `
 })
 export class HousesComponent {
+  hasAuth$: Observable<boolean>;
   houses$: Observable<House[]>;
   newHouse: House = null;
   constructor(private dataService: DataService) {
       this.houses$ = dataService.houses$;
+      this.hasAuth$ = dataService.hasAuth$;
   }
   
   createNewHouse() {
