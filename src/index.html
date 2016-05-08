@@ -4,6 +4,11 @@
 <head>
   <base href="/built/" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JBurchard Rental Agency (demo)">
+  <meta property="og:description" content="Demo rental agency using Angular2 + Typescript + Firebase">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://i.imgur.com/KpHI5bH.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -13,13 +18,7 @@
   <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
   <script src="https://code.angularjs.org/tools/system.js"></script>
   <script src="https://code.angularjs.org/2.0.0-beta.16/Rx.js"></script>
-  <!-- <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
-  <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
-
-  <script src="../node_modules/systemjs/dist/system.src.js"></script>
-
-  <script src="../node_modules/rxjs/bundles/Rx.js"></script> -->
-
+  
   <script>
     System.import('system-config.js').then(function () {
       System.import('app/bootstrap');
@@ -29,10 +28,12 @@
       console.log(err.stack);
     });
   </script>
+  
 </head>
 
 <body>
   <my-app>Loading...</my-app>
+  <div id="fb-root"></div>
 </body>
 
 </html>

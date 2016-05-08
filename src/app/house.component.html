@@ -41,7 +41,8 @@
         <div class="property_rented">
             <span>{{house.isRented ? 'Rented' : 'Available'}}</span>
         </div>
-        <div class="property_rent" style="">
+        <div class="property_rent">
+            <div [id]="house.id" class="fb-share-button" data-layout="button" data-mobile-iframe="true"></div>
             <span>Monthly Rent:</span> <strong>{{house.rent | currency:'USD':true:'1.0-0'}}</strong>
         </div>
     </div>
