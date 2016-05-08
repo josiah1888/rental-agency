@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/Observable/of';
+import 'rxjs/add/operator/map';
 import {House} from './house';
 import {DataService} from './data.service';
 import {HouseComponent} from './house.component';
@@ -25,7 +25,7 @@ export class HousesComponent {
   houses$: Observable<House[]>;
   newHouse: House = null;
   constructor(private dataService: DataService) {
-      this.houses$ = dataService.houses$;
+      this.houses$ = dataService.houses$.map(i => i.sort(this.sortHouses));
       this.hasAuth$ = dataService.hasAuth$;
   }
   
@@ -44,5 +44,15 @@ export class HousesComponent {
   
   cancel() {
       this.newHouse = null;
+  }
+  
+  sortHouses(a: House, b: House): number {
+    if (a.order < b.order) {
+        return -1;
+    } else if (a.order > b.order) {
+        return 1;
+    } else {
+        return 0;
+    }
   }
 }

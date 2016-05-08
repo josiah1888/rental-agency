@@ -15,8 +15,13 @@ export class HouseComponent {
   @Output() save: EventEmitter<House> = new EventEmitter();
   @Output() delete: EventEmitter<House> = new EventEmitter();
   hasAuth$: Observable<boolean>;
-  constructor(dataService: DataService) {
+  
+  constructor(private dataService: DataService) {
     this.hasAuth$ = dataService.hasAuth$;
+  }
+  
+  changeOrder({house, direction}: {house: House, direction: number}) {
+    this.dataService.changeOrder(house, direction);
   }
 }
 

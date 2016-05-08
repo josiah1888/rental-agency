@@ -1,5 +1,6 @@
 export class House {
     public id: string = '';
+    public order: number = 0;
     public rent: number = 525;
     public isRented: boolean = false;
     public numBedrooms: number = 1;

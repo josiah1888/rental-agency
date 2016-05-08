@@ -45,6 +45,7 @@ export class DataService {
     if (house.id) {
       this.update(house);
     } else {
+      house.order = this._houses.length;
       this.firebase.push(house);
     }
   }
@@ -68,5 +69,22 @@ export class DataService {
   logout() {
     this.firebase.unauth();
     this.hasAuth$.next(false);
+  }
+  
+  changeOrder(house: House, direction: number) {
+    let housesToSwap = this._houses
+      .filter(i => i.order === house.order + direction);
+      
+    housesToSwap
+      .forEach(i => {
+        let copy = Object.assign({}, i);
+        copy.order -= direction;
+        this.update(copy);
+      });
+    
+    if (housesToSwap.length) {
+      house.order += direction;
+      this.update(house);
+    }
   }
 }

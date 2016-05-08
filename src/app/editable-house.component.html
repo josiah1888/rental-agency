@@ -1,6 +1,8 @@
 <div class="property_panel_container">
     <div class="property_panel">
         <div class="property__actions-container">
+            <i class="fa fa-chevron-up large margin--small" (click)="changeOrder.emit({house: house, direction: -1})"></i>
+            <i class="fa fa-chevron-down large margin--small" (click)="changeOrder.emit({house: house, direction: 1})"></i>
             <i class="fa fa-save large margin--small" (click)="save.emit(house)"></i>
             <i class="fa fa-close large margin--small" (click)="cancel.emit()"></i>
             <i *ngIf="house.id" class="fa fa-trash large margin--small" (click)="delete.emit(house)"></i> 
@@ -9,7 +11,6 @@
             <input [(ngModel)]="house.address" />
         </div>
         <div class="property_img">
-            <!--431 S. Ellis-->
             <div style="position: absolute; right: 0; z-index: 5;" class="full-width">
             <label for="ImageUrl" style="color: #FFF;" >Image Url</label>
             <input name="ImageUrl" [(ngModel)]="house.imageUrl" class="full-width"/>
