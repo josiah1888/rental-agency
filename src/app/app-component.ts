@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {HousesComponent} from './houses.component';
-import {HouseDetailsComponent} from './house-details.component';
-import {LoginComponent} from './login.component';
+import {HousesComponent} from './house/houses.component';
+import {HouseDetailsComponent} from './house/house-details/house-details.component';
+import {LoginComponent} from './login/login.component';
 import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 
 @Routes([
@@ -12,6 +12,7 @@ import {Routes, Router, ROUTER_DIRECTIVES} from '@angular/router';
 @Component({
   selector: 'my-app',
   template: `
+      <div class="float-right"><a [routerLink]="['/login']">Login</a></div>
       <router-outlet></router-outlet>
   `,
   directives: [HousesComponent, LoginComponent, ROUTER_DIRECTIVES]

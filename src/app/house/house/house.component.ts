@@ -1,10 +1,10 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/Observable/of';
-import {House} from './house';
-import {DataService} from './data.service';
-import {EditableHouseComponent} from './editable-house.component';
-import {HouseAddressUrlPipe} from './house-address-url.pipe';
+import {House, HouseService} from '../services/house.service';
+import {EditableHouseComponent} from '../editable-house/editable-house.component';
+import {HouseAddressUrlPipe} from '../pipes/house-address-url.pipe';
+import {LoginService} from '../../login/login.service';
+import {FacebookService} from '../../services/facebook.service';
 
 @Component({
   selector: 'house',
@@ -18,27 +18,26 @@ export class HouseComponent {
   hasAuth$: Observable<boolean>;
   pipe: HouseAddressUrlPipe = new HouseAddressUrlPipe();
   
-  constructor(private dataService: DataService) {
-    this.hasAuth$ = dataService.hasAuth$;
+  constructor(private houseService: HouseService, private loginService: LoginService, private facebookService: FacebookService) {
+    this.hasAuth$ = loginService.hasAuth$;
   }
   
   changeOrder({house, direction}: {house: House, direction: number}) {
-    this.dataService.changeOrder(house, direction);
+    this.houseService.changeOrder(house, direction);
   }
   
   ngAfterViewInit() {
-    this.setupShareButton();
+    this.initFacebookShare();
   }
   
-  setupShareButton() {
-    let share: Element = document.getElementById(this.house.id);
-    let url = window.location.href.replace('localhost:8080', '0ce0a49c.ngrok.io');
+  initFacebookShare() {
+    let url = window.location.href;
     let addressUrl = this.pipe.transform(this.house.address);
     if (!url.includes(addressUrl)) {
       url += addressUrl;
     }
     
-    share.setAttribute('data-href', url);
+    this.facebookService.setShareButtonAttribute(this.house.id, url);
   }
 }
 

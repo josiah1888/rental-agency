@@ -1,8 +1,7 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/Observable/of';
-import {House} from './house';
-import {DataService} from './data.service';
+import {House} from '../services/house.service';
 
 @Component({
   selector: 'editable-house',

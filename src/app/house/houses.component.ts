@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import {House} from './house';
-import {DataService} from './data.service';
-import {HouseComponent} from './house.component';
-import {EditableHouseComponent} from './editable-house.component';
-
+import {House, HouseService} from './services/house.service';
+import {HouseComponent} from './house/house.component';
+import {EditableHouseComponent} from './editable-house/editable-house.component';
+import {LoginService} from '../login/login.service';
+import {FacebookService} from '../services/facebook.service'
+;
 @Component({
   selector: 'houses',
   directives: [HouseComponent, EditableHouseComponent],
@@ -24,9 +25,9 @@ export class HousesComponent {
   hasAuth$: Observable<boolean>;
   houses$: Observable<House[]>;
   newHouse: House = null;
-  constructor(private dataService: DataService) {
-      this.houses$ = dataService.houses$.map(i => i.sort(this.sortHouses));
-      this.hasAuth$ = dataService.hasAuth$;
+  constructor(private houseService: HouseService, private loginService: LoginService, private facebookService: FacebookService) {
+      this.houses$ = houseService.collection$.map(i => i.sort(this.sortHouses));
+      this.hasAuth$ = loginService.hasAuth$;
   }
   
   createNewHouse() {
@@ -34,12 +35,12 @@ export class HousesComponent {
   }
   
   saveHouse(house: House) {
-      this.dataService.create(house);
+      this.houseService.create(house);
       this.newHouse = null;
   }
   
   deleteHouse(house: House) {
-      this.dataService.delete(house);
+      this.houseService.delete(house);
   }
   
   cancel() {
@@ -57,16 +58,6 @@ export class HousesComponent {
   }
   
   ngAfterViewInit() {
-      this.facebookShareInit();
-  }
-  
-  facebookShareInit() {
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+      this.facebookService.initShareButtons();
   }
 }

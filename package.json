@@ -11,7 +11,7 @@
     "postinstall": "typings install --ambient",
     "clean": "rimraf built/",
     "copy": "cp src/{index.html,system-config.js} built/",
-    "copytemplates": "cp src/app/{*.html} built/app/",
+    "copytemplates": "cp src/app/house/editable-house/{*.html} built/app/house/editable-house && cp src/app/house/house/{*.html} built/app/house/house",
     "build": "tsc && npm run copy && npm run copytemplates && npm run styles",
     "watch": "tsc --watch",
     "serve": "live-server --entry-file=built/index.html",

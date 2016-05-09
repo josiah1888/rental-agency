@@ -1,8 +1,8 @@
 import {Observable} from 'rxjs/Observable';
 import {Subscription} from 'rxjs/Subscription'
 import {Component} from '@angular/core';
-import {DataService} from './data.service';
 import {Router} from '@angular/router';
+import {LoginService} from './login.service';
 
 @Component({
   selector: 'login',
@@ -24,8 +24,8 @@ export class LoginComponent {
   email: string;
   password: string;
   hasAuthSub: Subscription;
-  constructor(private dataService: DataService, private router: Router) {
-      this.hasAuth$ = dataService.hasAuth$;
+  constructor(private loginService: LoginService, private router: Router) {
+      this.hasAuth$ = loginService.hasAuth$;
   }
   
   ngOnInit() {
@@ -42,10 +42,10 @@ export class LoginComponent {
   }
   
   login() {
-      this.dataService.login(this.email, this.password);
+      this.loginService.login(this.email, this.password);
   }
   
   logout() {
-      this.dataService.logout();
+      this.loginService.logout();
   }
 }
