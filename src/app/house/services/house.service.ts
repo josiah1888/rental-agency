@@ -19,6 +19,15 @@ export class HouseService extends FirebaseService<House> {
         super.create(house);
     }
     
+    delete(house: House) {
+      super.delete(house);
+      this.collection
+        .filter(i => i.order > house.order)
+        .forEach(i => {
+          i.order--; this.update(i);
+        });
+    }
+    
    changeOrder(house: House, direction: number) {
     let housesToSwap = this.collection
       .filter(i => i.order === house.order + direction);

@@ -49,5 +49,5 @@
     <div class="clear"></div>
 </div>
 
-<editable-house [house]="house" *ngIf="isEditing" (save)="save.emit($event); isEditing = false" (cancel)="isEditing = false" 
+<editable-house [house]="editableHouse" *ngIf="isEditing" (save)="save.emit($event); isEditing = false" (cancel)="isEditing = false" 
 (delete)="delete.emit($event)" (changeOrder)="changeOrder($event)"></editable-house>

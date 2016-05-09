@@ -7,7 +7,7 @@ export class FacebookService {
   Set the required href attribute on the share button
  */
   setShareButtonAttribute(elementId: string, href: string) {
-    href = href.replace('localhost:8080', '0ce0a49c.ngrok.io'); // temp
+    href = href.replace('localhost:8080', '02ce7d90.ngrok.io'); // temp
     let share: Element = document.getElementById(elementId);
     share.setAttribute('data-href', href);
   }

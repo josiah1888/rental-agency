@@ -5,7 +5,7 @@ import {House} from '../services/house.service';
 
 @Component({
   selector: 'editable-house',
-  templateUrl: 'app/editable-house.component.html'
+  templateUrl: 'app/house/editable-house/editable-house.component.html'
 })
 export class EditableHouseComponent {
   @Input() house: House;

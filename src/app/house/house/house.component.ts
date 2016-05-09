@@ -8,7 +8,7 @@ import {FacebookService} from '../../services/facebook.service';
 
 @Component({
   selector: 'house',
-  templateUrl: 'app/house.component.html',
+  templateUrl: 'app/house/house/house.component.html',
   directives: [EditableHouseComponent]
 })
 export class HouseComponent {
@@ -17,9 +17,14 @@ export class HouseComponent {
   @Output() delete: EventEmitter<House> = new EventEmitter();
   hasAuth$: Observable<boolean>;
   pipe: HouseAddressUrlPipe = new HouseAddressUrlPipe();
+  editableHouse: House;
   
   constructor(private houseService: HouseService, private loginService: LoginService, private facebookService: FacebookService) {
     this.hasAuth$ = loginService.hasAuth$;
+  }
+  
+  ngOnInit() {
+    this.editableHouse = Object.assign({}, this.house);
   }
   
   changeOrder({house, direction}: {house: House, direction: number}) {

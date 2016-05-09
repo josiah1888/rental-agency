@@ -36,7 +36,7 @@ export class FirebaseService<T extends CollectionItem> {
     this.firebase.on('child_changed', snapshot => {
       this._collection[(this._collection.map(i => i.id).indexOf(snapshot.key()))] = snapshot.val();
       this.collection$.next(this._collection);      
-    }); 
+    });
   }
 
   create(item: T) {
