@@ -1,0 +1,53 @@
+<div class="property_panel_container" [hidden]="isEditing">
+    <div class="property_panel">
+        <div class="property_location">
+            <strong>{{house.address}}</strong>
+        <div *ngIf="hasAuth$ | async" class="property__actions-container">
+            <i class="fa fa-edit large margin--small" (click)="isEditing = true"></i>
+        </div>
+        </div>
+        <div class="property_img">
+            <a class="fancybox" rel="431SEllis" [href]="house.imageUrl" title=""><img [src]="house.imageUrl" height="290" [alt]="house.address" style="margin: -25px auto 0px -195px;"></a>
+        </div>
+
+        <div class="property_list">
+            <ul>
+                <li class="prop_item"><strong class="prop_title">Bedrooms</strong> <br> <span>{{house.numBedrooms}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Bathrooms</strong> <br> <span>{{house.numBathrooms}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Location</strong> <br> <span>{{house.location}}</span></li>
+                <li class="prop_item"><strong class="prop_title">School District</strong> <br> <span>{{house.schoolDistrict}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Parking</strong> <br> <span>{{house.parking}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Laundry</strong> <br> <span>{{house.laundry}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Deposit</strong> <br> <span>{{house.deposit | currency:'USD':true:'1.0-0'}}</span></li>
+                <li class="prop_item"><strong class="prop_title">Pets</strong> <br> <span>{{house.petsAllowed ? 'Yes' : 'No'}}</span></li>
+                <!--<li class="prop_item"><strong class="prop_title">Utilities:</strong> <span>Water/Sewer/Trash</span></li>
+                        <li class="prop_item"><strong class="prop_title">Amenities:</strong> <span>Cable</span></li>-->
+            </ul>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="property_panel">
+        <div class="property_pics" style="padding-top:5px;">
+            <p>
+                <!--<a class="fancybox" rel="431SEllis" href="../img/gallery/singlefamily/lrg_singlefamily_5.jpg" title=""><img src="../img/gallery/singlefamily/thumb_singlefamily_5.jpg" alt="431 S. Ellis" /></a>
+              <a class="fancybox" rel="431SEllis" href="../img/gallery/singlefamily/lrg_singlefamily_4.jpg" title=""><img src="../img/gallery/singlefamily/thumb_singlefamily_4.jpg" alt="431 S. Ellis" /></a>-->
+            </p>
+        </div>
+        <div class="property_description">
+            <h3 class="prop_title">Description</h3>
+            <p>{{house.description}}</p>
+        </div>
+        <div class="property_rented">
+            <span>{{house.isRented ? 'Rented' : 'Available'}}</span>
+        </div>
+        <div class="property_rent">
+            <div [id]="house.id" class="fb-share-button" data-layout="button" data-mobile-iframe="true"></div>
+            <span>Monthly Rent:</span> <strong>{{house.rent | currency:'USD':true:'1.0-0'}}</strong>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<editable-house [house]="editableHouse" *ngIf="isEditing" (save)="save.emit($event); isEditing = false" (cancel)="isEditing = false" 
+(delete)="delete.emit($event)" (changeOrder)="changeOrder($event)"></editable-house>
