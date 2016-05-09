@@ -1,7 +1,7 @@
 System.config({
   map: {
-    'rxjs': '/node_modules/rxjs',
-    '@angular': '/node_modules/@angular'
+    'rxjs': '/rental-agency/node_modules/rxjs',
+    '@angular': '/rental-agency/node_modules/@angular'
   },
   packages: {
     'app': {
