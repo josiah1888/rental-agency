@@ -1,7 +1,7 @@
 System.config({
   map: {
-    'rxjs': '/rental-agency/node_modules/rxjs',
-    '@angular': '/rental-agency/node_modules/@angular'
+    'rxjs': 'https://jburchard.com/rental-agency/node_modules/rxjs',
+    '@angular': 'https://jburchard.com/rental-agency/node_modules/@angular'
   },
   packages: {
     'app': {
