@@ -1,6 +1,6 @@
 ## JBurchard Rentals
 
-[JBurchard Rentals](https://rentals.jburchard.com) is a demo rental agency website using Angular2 + TypeScript + Firebase.
+[JBurchard Rentals](https://glaring-torch-2375.firebaseapp.com/) is a demo rental agency website using Angular2 + TypeScript + Firebase.
 You can see property listings and share them to Facebook from the site.
 
 If you log in with `test@jburchard.com` and `Password123` you can edit the properties and watch them live reload to all other clients.
