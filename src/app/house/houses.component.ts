@@ -58,6 +58,6 @@ export class HousesComponent {
   }
   
   ngAfterViewInit() {
-      setTimeout(() => this.facebookService.initShareButtons(), 500);
+      setTimeout(() => this.facebookService.initShareButtons(), 1000);
   }
 }
