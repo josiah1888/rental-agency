@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <base href="/built/" />
+  <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:type" content="website">
   <meta property="og:title" content="JBurchard Rental Agency (demo)">
@@ -11,14 +11,15 @@
   <meta property="og:image" content="http://i.imgur.com/KpHI5bH.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
 
-  <script src="../node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="../node_modules/zone.js/dist/zone.js"></script>
+  <script src="https://npmcdn.com/es6-shim@0.35.0/es6-shim.min.js"></script>
+  <script src="https://npmcdn.com/zone.js@0.6.12?main=browser"></script>
+  <script src="https://npmcdn.com/reflect-metadata@0.1.3"></script>
+  <script src="https://npmcdn.com/systemjs@0.19.27/dist/system.src.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-  <script src="https://code.angularjs.org/tools/system.js"></script>
-  <script src="https://code.angularjs.org/2.0.0-beta.16/Rx.js"></script>
-  
+
   <script>
     System.import('system-config.js').then(function () {
       System.import('app/bootstrap');
@@ -28,7 +29,7 @@
       console.log(err.stack);
     });
   </script>
-  
+
 </head>
 
 <body>

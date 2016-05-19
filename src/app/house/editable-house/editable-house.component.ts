@@ -1,6 +1,5 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/Observable/of';
 import {House} from '../services/house.service';
 
 @Component({
